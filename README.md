@@ -1,76 +1,61 @@
-# commerce.js
+# @hanzo/commerce.js
 
-Hanzo Commerce SDK - Modern e-commerce framework for React and Next.js.
-
-This package wraps [@hanzo/commerce](https://github.com/hanzoai/react-sdk/tree/main/pkg/commerce) for easy standalone usage.
+Modern e-commerce framework for React/Next.js. Wraps @hanzo/commerce with a standalone package.
 
 ## Installation
 
 ```bash
-npm install commerce.js
-# or
-yarn add commerce.js
-# or
-pnpm add commerce.js
+npm install @hanzo/commerce.js
 ```
 
 ## Quick Start
 
 ```tsx
-import {
-  AddToCartWidget,
+import { 
+  ProductCard, 
+  AddToCartWidget, 
   CartPanel,
-  ProductCard,
-  PaymentStepForm,
-  ShippingStepForm
-} from 'commerce.js'
+  CommerceProvider 
+} from '@hanzo/commerce.js'
 
-function ProductPage({ product }) {
+function Shop({ products }) {
   return (
-    <div>
-      <ProductCard product={product} />
-      <AddToCartWidget sku={product.sku} />
-    </div>
-  )
-}
-
-function CartPage() {
-  return <CartPanel />
-}
-
-function CheckoutPage() {
-  return (
-    <>
-      <ShippingStepForm />
-      <PaymentStepForm />
-    </>
+    <CommerceProvider>
+      <div className="products">
+        {products.map(product => (
+          <ProductCard key={product.id} product={product}>
+            <AddToCartWidget sku={product.sku} />
+          </ProductCard>
+        ))}
+      </div>
+      <CartPanel />
+    </CommerceProvider>
   )
 }
 ```
 
-## Features
-
-- React components for commerce UIs
-- Cart management with MobX
-- Product catalog components
-- Checkout flow components
-- Square payment integration
-- Crypto payment support
-- Promo code handling
-- Type-safe with TypeScript
-
 ## Components
 
+### Product Display
+- `ProductCard` - Display product information
+- `CarouselBuyCard` - Product card with carousel
+- `Icons` - Commerce icons
+
+### Cart
+- `CartPanel` - Shopping cart sidebar
 - `AddToCartWidget` - Add to cart button with quantity
-- `CartPanel` - Shopping cart sidebar/panel
-- `ProductCard` - Product display card
-- `CarouselBuyCard` - Product carousel with buy button
-- `PaymentStepForm` - Payment form component
-- `ShippingStepForm` - Shipping address form
 
-## Documentation
+### Checkout
+- `PaymentStepForm` - Payment form step
+- `ShippingStepForm` - Shipping form step
 
-See [@hanzo/commerce documentation](https://github.com/hanzoai/react-sdk/tree/main/pkg/commerce) for full API reference.
+## Types
+
+Import types from the `/types` subpath:
+
+```ts
+import type { Product, LineItem, CartItem } from '@hanzo/commerce.js/types'
+```
 
 ## License
 

@@ -1,7 +1,11 @@
 {
-  "name": "commerce.js",
+  "name": "@hanzo/commerce.js",
   "version": "1.0.0",
   "description": "Hanzo Commerce SDK - Modern e-commerce framework. Wraps @hanzo/commerce.",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
