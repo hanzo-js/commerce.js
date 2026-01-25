@@ -52,7 +52,7 @@
   },
   "homepage": "https://github.com/hanzo-js/commerce.js#readme",
   "dependencies": {
-    "@hanzo/commerce": "^7.4.0"
+    "@hanzo/commerce": "^7.3.10"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
