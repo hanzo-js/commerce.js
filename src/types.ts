@@ -1,7 +1,10 @@
-/**
- * commerce.js/types
- *
- * Type definitions for Hanzo Commerce
- */
-
-export * from '@hanzo/commerce/types'
+/** commerce.js/types — re-exports types from @hanzo/commerce/client */
+export type {
+  CommerceClientConfig,
+  Balance,
+  Transaction,
+  Subscription,
+  Plan,
+  Payment,
+  UsageRecord,
+} from '@hanzo/commerce/client'

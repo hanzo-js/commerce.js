@@ -1,7 +1,7 @@
 {
-  "name": "@hanzo/commerce.js",
-  "version": "1.0.0",
-  "description": "Hanzo Commerce SDK - Modern e-commerce framework. Wraps @hanzo/commerce.",
+  "name": "commerce.js",
+  "version": "7.4.0",
+  "description": "Hanzo Commerce API client — billing, subscriptions, payments, usage tracking. Vanilla JS, no framework deps.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
@@ -33,45 +33,34 @@
   "scripts": {
     "build": "tsup src/index.ts src/types.ts src/billing.ts --format cjs,esm --dts --clean",
     "dev": "tsup src/index.ts src/types.ts src/billing.ts --format cjs,esm --dts --watch",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "pnpm build",
     "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hanzo-js/commerce.js.git"
+    "url": "git+https://github.com/hanzoai/commerce.js.git"
   },
   "keywords": [
     "commerce",
-    "ecommerce",
-    "cart",
-    "checkout",
+    "billing",
+    "subscriptions",
     "payments",
+    "usage",
     "hanzo",
-    "react",
-    "nextjs"
+    "api-client",
+    "vanilla-js"
   ],
   "author": "Hanzo AI, Inc. <hi@hanzo.ai>",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/hanzo-js/commerce.js/issues"
+    "url": "https://github.com/hanzoai/commerce.js/issues"
   },
-  "homepage": "https://github.com/hanzo-js/commerce.js#readme",
+  "homepage": "https://github.com/hanzoai/commerce.js#readme",
   "dependencies": {
-    "@hanzo/commerce": "^7.3.10"
+    "@hanzo/commerce": ">=7.4.0"
   },
   "devDependencies": {
-    "@types/react": "^19.0.0",
-    "react": "^19.0.0",
     "tsup": "^8.0.0",
     "typescript": "^5.3.0"
-  },
-  "peerDependencies": {
-    "react": "^18.0.0 || ^19.0.0",
-    "next": ">=14.0.0"
-  },
-  "peerDependenciesMeta": {
-    "next": {
-      "optional": true
-    }
   }
 }
