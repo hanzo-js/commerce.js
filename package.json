@@ -58,7 +58,7 @@
   },
   "homepage": "https://github.com/hanzoai/commerce.js#readme",
   "dependencies": {
-    "@hanzo/commerce": ">=7.4.0"
+    "@hanzo/commerce": "^7.3.10"
   },
   "devDependencies": {
     "tsup": "^8.0.0",
