@@ -1,6 +1,7 @@
 {
   "name": "commerce.js",
   "version": "7.4.0",
+  "packageManager": "pnpm@9.15.4",
   "description": "Hanzo Commerce API client — billing, subscriptions, payments, usage tracking. Vanilla JS, no framework deps.",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
